@@ -10,6 +10,8 @@ colorscheme desert
 
 " 支援 256 色
 set t_Co=256
+" 設定語法高亮
+syntax on
 "設定高亮度搜索
 set hlsearch
 "將搜尋到的字由土黃色變成深藍色
