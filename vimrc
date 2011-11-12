@@ -42,12 +42,16 @@ set nowrap
 nmap <silent> <F8> :set wrap!<CR>
 
 """"""""""""""""""""""""""""""
-" vim功能鍵修改
+" vim 功能鍵修改
 """"""""""""""""""""""""""""""
+"畫面滾動
 nmap <C-up> <C-y>
 nmap <C-down> <C-e>
 
-"show QuickFix Switch Win
+"設定行號
+nmap <F7> :set nu!<CR>
+
+"show QuickFix Switch Win for 'vimgrep' result
 nmap <silent> <F10> <ESC>:call QFSwitch()<CR>
 
 """"""""""""""""""""""""""""""
@@ -71,6 +75,12 @@ endfunction
 """"""""""""""""""""""""""""""
 let g:NERDTreeQuitOnOpen = 1  " 打开文件后是否关闭NerdTree窗口
 nmap <silent><F12>  :NERDTreeToggle<CR>
+
+""""""""""""""""""""""""""""""
+" vim Bookmarks  
+""""""""""""""""""""""""""""""
+nmap <S-F12> :MarksBrowser<CR>
+
 
 """"""""""""""""""""""""""""""
 " TagBar (ctags)
