@@ -209,6 +209,9 @@ if has("cscope")
 	if filereadable("/home/omk/download_large/linux-2.6.39.4/cscope.out")
 		cs add /home/omk/download_large/linux-2.6.39.4/cscope.out  
 	endif
+	if filereadable("/home/omk/download_large/linux-2.6.39.4/drivers/cscope.out")
+		cs add /home/omk/download_large/linux-2.6.39.4/drivers/cscope.out  
+	endif
 	if filereadable("/home/omk/download_large/linux-2.6.39.4/drivers/net/cscope.out")
 		cs add /home/omk/download_large/linux-2.6.39.4/drivers/net/cscope.out  
 	endif
