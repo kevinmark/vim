@@ -79,7 +79,7 @@ nmap <silent><F12>  :NERDTreeToggle<CR>
 """"""""""""""""""""""""""""""
 " vim Bookmarks  
 """"""""""""""""""""""""""""""
-nmap <S-F12> :MarksBrowser<CR>
+nmap <F5> :MarksBrowser<CR>
 
 
 """"""""""""""""""""""""""""""
