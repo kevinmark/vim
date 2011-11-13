@@ -221,6 +221,9 @@ if has("cscope")
 	if filereadable("/home/omk/download_large/linux-2.6.39.4/net/ipv4/cscope.out")
 		cs add /home/omk/download_large/linux-2.6.39.4/net/ipv4/cscope.out 
 	endif
+	if filereadable("/home/omk/download_large/linux-2.6.39.4/net/cscope.out")
+		cs add /home/omk/download_large/linux-2.6.39.4/net/cscope.out 
+	endif
 endif
 
 
