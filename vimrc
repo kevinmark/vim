@@ -191,20 +191,26 @@ nmap <silent> <F9> :TagbarToggle<CR>
 """"""""""""""""""""""""""""""
 " cs add ../../../../../
 if has("cscope")
-	if filereadable("/home/omk/download/sh5cl/cscope.out")
-		cs add /home/omk/download/sh5cl/cscope.out
-	endif
-	if filereadable("/home/omk/download/laptop-net-2.26.orig/cscope.out")
-		cs add /home/omk/download/laptop-net-2.26.orig/cscope.out 
-	endif
-	if filereadable("/home/omk/task/rtorrent-0.8.6/cscope.out")
-		cs add /home/omk/task/rtorrent-0.8.6/cscope.out 
-	endif
+"	if filereadable("/home/omk/download/sh5cl/cscope.out")
+"		cs add /home/omk/download/sh5cl/cscope.out
+"	endif
+"	if filereadable("/home/omk/download/laptop-net-2.26.orig/cscope.out")
+"		cs add /home/omk/download/laptop-net-2.26.orig/cscope.out 
+"	endif
+"	if filereadable("/home/omk/task/rtorrent-0.8.6/cscope.out")
+"		cs add /home/omk/task/rtorrent-0.8.6/cscope.out 
+"	endif
 "	if filereadable("/home/omk/download/src/rtorrent-0.8.9/cscope.out")
 "		cs add /home/omk/download/src/rtorrent-0.8.9/cscope.out 
 "	endif
-	if filereadable("/home/omk/download/src/libtorrent-0.12.6/cscope.out")
-		cs add /home/omk/download/src/libtorrent-0.12.6/cscope.out 
+"	if filereadable("/home/omk/download/src/libtorrent-0.12.6/cscope.out")
+"		cs add /home/omk/download/src/libtorrent-0.12.6/cscope.out 
+"	endif
+	if filereadable("/home/omk/download_large/linux-2.6.39.4/cscope.out")
+		cs add /home/omk/download_large/linux-2.6.39.4/cscope.out 
+	endif
+	if filereadable("/home/omk/download_large/linux-2.6.39.4/drivers/net/cscope.out")
+		cs add /home/omk/download_large/linux-2.6.39.4/drivers/net/cscope.out 
 	endif
 endif
 
