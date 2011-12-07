@@ -221,6 +221,9 @@ if has("cscope")
 	if filereadable("/home/omk/download_large/linux-2.6.32.32/cscope.out")
 		cs add /home/omk/download_large/linux-2.6.32.32/cscope.out  
 	endif
+	if filereadable("/home/omk/download_large/linux-2.6.32.32_ugw5.1/cscope.out")
+		cs add /home/omk/download_large/linux-2.6.32.32_ugw5.1/cscope.out  
+	endif
 	if filereadable("/home/omk/download_large/linux-2.6.39.4/cscope.out")
 		cs add /home/omk/download_large/linux-2.6.39.4/cscope.out  
 	endif
