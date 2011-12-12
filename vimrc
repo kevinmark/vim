@@ -44,12 +44,21 @@ nmap <silent> <F8> :set wrap!<CR>
 """"""""""""""""""""""""""""""
 " vim 功能鍵修改
 """"""""""""""""""""""""""""""
+" putty keyboard input change for VIM
+"   use 'od -v' to see real input in PuTTY
+if hostname() != "ubuntu"
+	map  <ESC>[A <C-Up>    
+	map  <ESC>[B <C-Down>
+	map! <ESC>[A <C-Up>
+	map! <ESC>[B <C-Down>
+else 
+endif
+"  map aplly in Visual mode, Normal mode
+"  map! apply in Insert mode, Command-line mode 
+
 "畫面滾動
 nmap <C-up> <C-y>
 nmap <C-down> <C-e>
-
-"nmap ^[[A <C-y>
-"map <ESC>[5A <C-up>
 
 "設定行號
 nmap <F7> :set nu!<CR>
