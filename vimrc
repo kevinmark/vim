@@ -48,6 +48,9 @@ nmap <silent> <F8> :set wrap!<CR>
 nmap <C-up> <C-y>
 nmap <C-down> <C-e>
 
+"nmap ^[[A <C-y>
+"map <ESC>[5A <C-up>
+
 "設定行號
 nmap <F7> :set nu!<CR>
 
