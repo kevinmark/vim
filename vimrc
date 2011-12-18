@@ -46,6 +46,7 @@ nmap <silent> <F8> :set wrap!<CR>
 """"""""""""""""""""""""""""""
 " putty keyboard input change for VIM
 "   use 'od -v' to see real input in PuTTY
+"echo hostname()
 if hostname() != "ubuntu"
 	map  <ESC>[A <C-Up>    
 	map  <ESC>[B <C-Down>
