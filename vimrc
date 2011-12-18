@@ -191,9 +191,9 @@ let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
 """"""""""""""""""""""""""""""
 " cs add ../../../../../
 if has("cscope")
-	if filereadable("/home/omk/download/sh5cl/cscope.out")
-		cs add /home/omk/download/sh5cl/cscope.out
-	endif
+"	if filereadable("/home/omk/download/sh5cl/cscope.out")
+"		cs add /home/omk/download/sh5cl/cscope.out
+"	endif
 "	if filereadable("/home/omk/download/laptop-net-2.26.orig/cscope.out")
 "		cs add /home/omk/download/laptop-net-2.26.orig/cscope.out 
 "	endif
