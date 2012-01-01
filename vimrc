@@ -16,8 +16,6 @@ syntax on
 set hlsearch
 "將搜尋到的字由土黃色變成深藍色
 highlight Search term=reverse ctermbg=4 ctermfg=7
-"摺疊程式碼(顏色)
-"hi Folded        ctermfg=brown ctermbg=NONE
 
 "置底功能列
 set laststatus=2
@@ -31,11 +29,13 @@ set autoindent
 "set smartindent
 "set paste  "停用所有的格式設定
 
-"摺疊程式碼
-set foldmethod=indent
-set foldlevel=4   "2層的折疊將被關閉
-set foldnestmax=99   "foldnestmax它會限制最多折疊幾層
-"set foldcolumn=4   "預留一塊foldcolumn的空間顯示折疊情形
+""摺疊程式碼
+"set foldmethod=indent
+"set foldlevel=4   "2層的折疊將被關閉
+"set foldnestmax=99   "foldnestmax它會限制最多折疊幾層
+""set foldcolumn=4   "預留一塊foldcolumn的空間顯示折疊情形
+""摺疊程式碼(顏色)
+""hi Folded        ctermfg=brown ctermbg=NONE
 
 "設定自動摺行
 set nowrap
@@ -44,6 +44,12 @@ nmap <silent> <F8> :set wrap!<CR>
 """"""""""""""""""""""""""""""
 " vim 功能鍵修改
 """"""""""""""""""""""""""""""
+" set leader to,
+" 当mapleader为未设置或为空时，使用缺省的”\”来作为mapleader
+let mapleader=","
+let g:mapleader=","
+
+"-----------------------------------------------
 " putty keyboard input change for VIM
 "   use 'od -v' to see real input in PuTTY
 "echo hostname()
@@ -60,12 +66,21 @@ endif
 "畫面滾動
 nmap <C-up> <C-y>
 nmap <C-down> <C-e>
+"-----------------------------------------------
 
 "設定行號
 nmap <F7> :set nu!<CR>
 
 "show QuickFix Switch Win for 'vimgrep' result
-nmap <silent> <F10> <ESC>:call QFSwitch()<CR>
+nmap <silent> <F10> :call QFSwitch()<CR>
+
+"關閉高亮搜尋標記
+nmap <leader>/ :nohl<CR>
+
+" ,p toggles paste mode
+" "set past?" display the status
+" "<BAR>" means &&
+nmap <leader>p :set paste!<BAR>set paste?<CR>
 
 """"""""""""""""""""""""""""""
 " QuickFix Switch Win function
@@ -83,17 +98,25 @@ function! QFSwitch()
 	endif
 endfunction
 
+
+""""""""""""""""""""""""""""""
+" EasyGrep (keymap vimgrep)
+""""""""""""""""""""""""""""""
+let g:EasyGrepRecursive=1  " specifies that recursive search be activated on start (0 / 1)
+
 """"""""""""""""""""""""""""""
 " NERD tree (file exporer) 
 """"""""""""""""""""""""""""""
 let g:NERDTreeQuitOnOpen = 1  " 打开文件后是否关闭NerdTree窗口
+let g:NERDTreeWinPos= 1 " 1=窗口出現在右方
+"let g:NERDTreeIgnore = [ '^\.svn$', '\~$' ] " 忽略.svn的显示
+
 nmap <silent><F12>  :NERDTreeToggle<CR>
 
 """"""""""""""""""""""""""""""
 " vim Bookmarks  
 """"""""""""""""""""""""""""""
 nmap <F5> :MarksBrowser<CR>
-
 
 """"""""""""""""""""""""""""""
 " TagBar (ctags)
