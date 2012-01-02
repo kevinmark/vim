@@ -58,8 +58,8 @@ endif
 "  map! apply in Insert mode, Command-line mode 
 
 "畫面滾動
-nmap <C-up> <C-y>
-nmap <C-down> <C-e>
+nmap <C-Up> <C-y>
+nmap <C-Down> <C-e>
 
 "設定行號
 nmap <F7> :set nu!<CR>
@@ -219,30 +219,21 @@ if has("cscope")
 "	if filereadable("/home/omk/download/src/libtorrent-0.12.6/cscope.out")
 "		cs add /home/omk/download/src/libtorrent-0.12.6/cscope.out 
 "	endif
-	if filereadable("/home/omk/download_large/linux-2.6.12/cscope.out")
-		cs add /home/omk/download_large/linux-2.6.12/cscope.out  
-	endif
 	if filereadable("/home/omk/download_large/linux-2.6.20/cscope.out")
 		cs add /home/omk/download_large/linux-2.6.20/cscope.out  
-	endif
-	if filereadable("/home/omk/download_large/linux-2.6.22/cscope.out")
-		cs add /home/omk/download_large/linux-2.6.22/cscope.out  
-	endif
-	if filereadable("/home/omk/download_large/linux-2.6.24/cscope.out")
-		cs add /home/omk/download_large/linux-2.6.24/cscope.out  
 	endif
 	if filereadable("/home/omk/download_large/linux-2.6.32.32/cscope.out")
 		cs add /home/omk/download_large/linux-2.6.32.32/cscope.out  
 	endif
-	if filereadable("/home/omk/download_large/linux-2.6.32.32_ugw5.1/cscope.out")
-		cs add /home/omk/download_large/linux-2.6.32.32_ugw5.1/cscope.out  
-	endif
-	if filereadable("/home/omk/download_large/linux-2.6.39.4/cscope.out")
-		cs add /home/omk/download_large/linux-2.6.39.4/cscope.out  
-	endif
-	if filereadable("/home/omk/task/igmp/cscope.out")
-		cs add /home/omk/task/igmp/cscope.out 
-	endif
+"	if filereadable("/home/omk/download_large/linux-2.6.32.32_ugw5.1/cscope.out")
+"		cs add /home/omk/download_large/linux-2.6.32.32_ugw5.1/cscope.out  
+"	endif
+"	if filereadable("/home/omk/download_large/linux-2.6.39.4/cscope.out")
+"		cs add /home/omk/download_large/linux-2.6.39.4/cscope.out  
+"	endif
+"	if filereadable("/home/omk/task/igmp/cscope.out")
+"		cs add /home/omk/task/igmp/cscope.out 
+"	endif
 endif
 
 
