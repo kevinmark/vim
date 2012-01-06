@@ -130,7 +130,13 @@ let g:tagbar_autofocus = 1  " 打開tagbar時焦點移過去
 let g:tagbar_sort = 0       " 依照程式碼中的位置來排序tag
 "let g:tagbar_compact = 1    " 關閉置頂help提示
 
+
 nmap <silent> <F9> :TagbarToggle<CR>
+
+""""""""""""""""""""""""""""""
+" Bug Fix about tags
+""""""""""""""""""""""""""""""
+"let Tlist_Ctags_Cmd = '/home/omk/local/bin/ctags'  "resolve 'Exuberant ctags not found' log
 
 """"""""""""""""""""""""""""""
 " Tag list (ctags)
@@ -242,12 +248,12 @@ if has("cscope")
 "	if filereadable("/home/omk/download/src/libtorrent-0.12.6/cscope.out")
 "		cs add /home/omk/download/src/libtorrent-0.12.6/cscope.out 
 "	endif
-	if filereadable("/home/omk/download_large/linux-2.6.20/cscope.out")
-		cs add /home/omk/download_large/linux-2.6.20/cscope.out  
-	endif
-	if filereadable("/home/omk/download_large/linux-2.6.32.32/cscope.out")
-		cs add /home/omk/download_large/linux-2.6.32.32/cscope.out  
-	endif
+"	if filereadable("/home/omk/download_large/linux-2.6.20/cscope.out")
+"		cs add /home/omk/download_large/linux-2.6.20/cscope.out  
+"	endif
+"	if filereadable("/home/omk/download_large/linux-2.6.32.32/cscope.out")
+"		cs add /home/omk/download_large/linux-2.6.32.32/cscope.out  
+"	endif
 "	if filereadable("/home/omk/download_large/linux-2.6.32.32_ugw5.1/cscope.out")
 "		cs add /home/omk/download_large/linux-2.6.32.32_ugw5.1/cscope.out  
 "	endif
