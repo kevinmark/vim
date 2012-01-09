@@ -53,13 +53,13 @@ let g:mapleader=","
 " putty keyboard input change for VIM
 "   use 'od -v' to see real input in PuTTY
 "echo hostname()
-if hostname() != "ubuntu"
+"if hostname() != "ubuntu"
 	map  <ESC>[A <C-Up>    
 	map  <ESC>[B <C-Down>
 	map! <ESC>[A <C-Up>
 	map! <ESC>[B <C-Down>
-else 
-endif
+"else 
+"endif
 "  map aplly in Visual mode, Normal mode
 "  map! apply in Insert mode, Command-line mode 
 
