@@ -56,15 +56,15 @@ let g:mapleader=","
 "if hostname() != "ubuntu"
 	map  <ESC>[A <C-Up>    
 	map  <ESC>[B <C-Down>
-	map! <ESC>[A <C-Up>
-	map! <ESC>[B <C-Down>
+	"map! <ESC>[A <C-Up>
+	"map! <ESC>[B <C-Down>
 "else 
 "endif
 "  map aplly in Visual mode, Normal mode
 "  map! apply in Insert mode, Command-line mode 
 
 "畫面滾動
-nmap <C-up> <C-y>
+nmap <C-up>   B<C-y>
 nmap <C-down> <C-e>
 "-----------------------------------------------
 
@@ -81,6 +81,9 @@ nmap <leader>/ :nohl<CR>
 " "set past?" display the status
 " "<BAR>" means &&
 nmap <leader>p :set paste!<BAR>set paste?<CR>
+
+"啟用滑鼠支援功能(在所有模式下)
+"set mouse=a
 
 """"""""""""""""""""""""""""""
 " QuickFix Switch Win function
