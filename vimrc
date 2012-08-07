@@ -69,13 +69,13 @@ nmap <C-down> <C-e>
 "-----------------------------------------------
 
 "設定行號
-nmap <F7> :set nu!<CR>
+nmap <silent> <F7> :set nu!<CR>
 
 "show QuickFix Switch Win for 'vimgrep' result
 nmap <silent> <F10> :call QFSwitch()<CR>
 
 "關閉高亮搜尋標記
-nmap <leader>/ :nohl<CR>
+nmap <silent> <leader>/ :nohl<CR>
 
 " ,p toggles paste mode
 " "set past?" display the status
@@ -83,7 +83,12 @@ nmap <leader>/ :nohl<CR>
 nmap <leader>p :set paste!<BAR>set paste?<CR>
 
 "啟用滑鼠支援功能(在所有模式下)
-"set mouse=a
+"(1) Double-click the left mouse button on a tag
+"(2) 按下 y 來 yank 這些被選中的文字
+"(3) 在你要貼上的地方按一下滑鼠左鍵，把游標移過去
+"(4) 點滑鼠中鍵
+"p.s.搭配 putty 右鍵貼上，mouse=nv 而非 =a
+set mouse=nv
 
 """"""""""""""""""""""""""""""
 " QuickFix Switch Win function

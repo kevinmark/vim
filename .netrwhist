@@ -1,5 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/home/omk/task/rtorrent-0.8.6/src/utils'
-let g:netrw_dirhist_2='/home/omk/下載/src/libtorrent-0.12.6/src/torrent/peer'
-let g:netrw_dirhist_3='/home/omk/download_large/linux-2.6.39.4/lib'
