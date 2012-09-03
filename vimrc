@@ -88,7 +88,7 @@ nmap <leader>p :set paste!<BAR>set paste?<CR>
 "(3) 在你要貼上的地方按一下滑鼠左鍵，把游標移過去
 "(4) 點滑鼠中鍵
 "p.s.搭配 putty 右鍵貼上，mouse=nv 而非 =a
-set mouse=nv
+"set mouse=nv
 
 """"""""""""""""""""""""""""""
 " QuickFix Switch Win function
