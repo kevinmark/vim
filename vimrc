@@ -41,15 +41,33 @@ set autoindent
 set nowrap
 nmap <silent> <F8> :set wrap!<CR>
 
+"設定行號
+nmap <silent> <F7> :set nu!<CR>
+
+"show QuickFix Switch Win for 'vimgrep' result
+nmap <silent> <F10> :call QFSwitch()<CR>
+
 """"""""""""""""""""""""""""""
 " vim 功能鍵修改
 """"""""""""""""""""""""""""""
+"-----------------------------------------------
 " set leader to,
 " 当mapleader为未设置或为空时，使用缺省的”\”来作为mapleader
 let mapleader=","
 let g:mapleader=","
-
 "-----------------------------------------------
+
+"關閉高亮搜尋標記
+nmap <silent> <leader>/ :nohl<CR>
+
+" ,p toggles paste mode
+" "set past?" display the status
+" "<BAR>" means &&
+nmap <leader>p :set paste!<BAR>set paste?<CR>
+
+""""""""""""""""""""""""""""""
+" 在 vim 中設定熱鍵給鍵盤方向鍵
+""""""""""""""""""""""""""""""
 " putty keyboard input change for VIM
 "   use 'od -v' to see real input in PuTTY
 "echo hostname()
@@ -66,22 +84,20 @@ let g:mapleader=","
 "畫面滾動
 nmap <C-up>   B<C-y>
 nmap <C-down> <C-e>
-"-----------------------------------------------
 
-"設定行號
-nmap <silent> <F7> :set nu!<CR>
+""""""""""""""""""""""""""""""
+" Cygwin compatible setup
+""""""""""""""""""""""""""""""
+if hostname() == "LiveDelta"
+set nocompatible
+" 叫vim不要使用與vi兼容的模式, 否則很多 vim 的新功能就不能使用
+set backspace=2
+"终端下vim不能用backspace删除字符
+endif
 
-"show QuickFix Switch Win for 'vimgrep' result
-nmap <silent> <F10> :call QFSwitch()<CR>
-
-"關閉高亮搜尋標記
-nmap <silent> <leader>/ :nohl<CR>
-
-" ,p toggles paste mode
-" "set past?" display the status
-" "<BAR>" means &&
-nmap <leader>p :set paste!<BAR>set paste?<CR>
-
+""""""""""""""""""""""""""""""
+" 滑鼠
+""""""""""""""""""""""""""""""
 "啟用滑鼠支援功能(在所有模式下)
 "(1) Double-click the left mouse button on a tag
 "(2) 按下 y 來 yank 這些被選中的文字
