@@ -255,8 +255,19 @@ nmap <silent> <F9> :TagbarToggle<CR>
 """"""""""""""""""""""""""""""
 " Cscope
 """"""""""""""""""""""""""""""
+" 1) export CSCOPE_DB $(pwd)  < before calling 'screen' >
+" 2) ctrl+\ +c  < show caller >
+"    ctrl+\ +s  < search pattern >
+""""""""""""""""""""""""""""""
 " cs add ../../../../../
 if has("cscope")
+	" add any cscope database in current directory
+	if filereadable("cscope.out")
+		cs add cscope.out 
+	" else add the database pointed to by environment variable 
+	elseif $CSCOPE_DB != ""
+		cs add cscope.out $CSCOPE_DB
+	endif
 "	if filereadable("/home/omk/download/sh5cl/cscope.out")
 "		cs add /home/omk/download/sh5cl/cscope.out
 "	endif
