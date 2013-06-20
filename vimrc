@@ -258,6 +258,7 @@ nmap <silent> <F9> :TagbarToggle<CR>
 " 1) export CSCOPE_DB $(pwd)  < before calling 'screen' >
 " 2) ctrl+\ +c  < show caller >
 "    ctrl+\ +s  < search pattern >
+"    ctrl+\ +g  < search definition >
 """"""""""""""""""""""""""""""
 " cs add ../../../../../
 if has("cscope")
