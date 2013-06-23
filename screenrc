@@ -1,0 +1,24 @@
+# Start message  (把惱人的screen開啟訊息關掉)
+startup_message off
+
+# Set hardstatus always on  (在視窗底下新增一個很好用的狀態列)
+#hardstatus alwayslastline " %-Lw%{= Bw}%n%f %t%{-}%+Lw %=| %M %d %0c:%s "
+
+# Set default encoding using utf8  (強制終端機編碼為utf8)
+defutf8 on
+
+# Refresh the display when exiting programs  (離開視窗時自動refresh一下螢幕)
+altscreen on
+
+# Dynamic title  (支援動態顯示視窗的「標題名稱」)
+shelltitle '$ |bash'
+
+# Disable vbell  (把熱鍵操作錯誤時的逼逼聲給關掉)
+vbell off
+
+# 進入 screen 載入 .profile
+defshell -bash      # dash makes it a login shell
+
+# increase the scrollback buffer, Initial setting is 100
+defscrollback 1024
+
