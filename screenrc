@@ -22,3 +22,7 @@ defshell -bash      # dash makes it a login shell
 # increase the scrollback buffer, Initial setting is 100
 defscrollback 1024
 
+# Prevent putty resize when starting screen
+termcap xterm 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l'
+terminfo xterm 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l'
+
