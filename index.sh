@@ -1,6 +1,6 @@
 #!/bin/sh
 
-#rm cscope.files cscope.in.out cscope.out cscope.po.out tags
+# rm cscope.files cscope.in.out cscope.out cscope.po.out tags
 if [ -f cscope.files ]; then
 	rm cscope.files
 fi
@@ -15,6 +15,12 @@ if [ -f cscope.po.out ]; then
 fi
 if [ -f tags ]; then
 	rm tags
+fi
+
+# argument "clean"
+if [  "$1" = "clean"  ]; then
+	echo "rm cscope.files cscope.in.out cscope.out cscope.po.out tags"
+	exit 1
 fi
 
 find . -name "*.h" -o -name "*.c" -o -name "*.cc" > cscope.files
