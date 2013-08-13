@@ -17,6 +17,7 @@ export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='02;04;32'
 
 alias vi='vim'
+alias ls='ls --color'
 alias sudo='sudo env PATH=$PATH'
 
 # user path for excuting private-build
