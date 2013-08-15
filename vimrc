@@ -255,7 +255,7 @@ nmap <silent> <F9> :TagbarToggle<CR>
 """"""""""""""""""""""""""""""
 " Cscope
 """"""""""""""""""""""""""""""
-" 1) export CSCOPE_DB $(pwd)  < before calling 'screen' >
+" 1) export CSCOPE_DB=$(pwd)  < before calling 'screen' >
 " 2) ctrl+\ +c  < show caller >
 "    ctrl+\ +s  < search pattern >
 "    ctrl+\ +g  < search definition >
