@@ -21,7 +21,7 @@ alias ls='ls --color'
 alias sudo='sudo env PATH=$PATH'
 
 # user path for excuting private-build
-PATH="$PATH":/sbin:${HOME}/local/bin
+PATH="$PATH":${HOME}/local/bin
 export LD_LIBRARY_PATH=${HOME}/local/lib/:${LD_LIBRARY_PATH}
 
 
@@ -42,4 +42,8 @@ if [ -d "/opt/brcm" ]; then
     PATH="$PATH":/opt/brcm/hndtools-mipsel-uclibc/bin:/opt/brcm/hndtools-mipsel
 fi
 
+# sbin PATH config
+if [ -z "$(env| grep PATH| grep sbin)" ]; then
+        PATH="$PATH":/usr/local/sbin:/usr/sbin:/sbin
+fi
 
