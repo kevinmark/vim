@@ -42,8 +42,4 @@ if [ -d "/opt/brcm" ]; then
     PATH="$PATH":/opt/brcm/hndtools-mipsel-uclibc/bin:/opt/brcm/hndtools-mipsel
 fi
 
-# sbin PATH config
-if [ -z "$(env| grep PATH| grep sbin)" ]; then
-        PATH="$PATH":/usr/local/sbin:/usr/sbin:/sbin
-fi
 
