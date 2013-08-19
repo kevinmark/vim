@@ -302,3 +302,10 @@ if has("cscope")
 endif
 
 
+""""""""""""""""""""""""""""""
+" GNU cflow : output colorful
+""""""""""""""""""""""""""""""
+" ex: cflow -o xxx.cflow
+""""""""""""""""""""""""""""""
+au BufNewFile,BufRead *.cflow setf cflow
+
