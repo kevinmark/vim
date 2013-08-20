@@ -21,7 +21,7 @@ if [ -f tags ]; then
 	rm tags
 	echo -e "rm tags\n"
 fi
-if [ -n "`ls -al | grep *.cflow`" ]; then
+if [ -n "`ls -al | grep .cflow`" ]; then
 	rm *.cflow
 	echo -e "rm *.cflow\n"
 fi
