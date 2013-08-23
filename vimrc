@@ -134,6 +134,9 @@ let g:EasyGrepRecursive=1  " specifies that recursive search be activated on sta
 let g:NERDTreeQuitOnOpen = 1  " 打开文件后是否关闭NerdTree窗口
 let g:NERDTreeWinPos= 1 " 1=窗口出現在右方
 "let g:NERDTreeIgnore = [ '^\.svn$', '\~$' ] " 忽略.svn的显示
+"let NERDTreeChDirMode= 1 " 改变tree目录的同时=改变工程的目录=
+"                       2 " 让=VIM的当前路径=和NERDTree的当前根路径一致
+let NERDTreeShowHidden = 1 " 是否默认显示隐藏文件
 
 nmap <silent><F12>  :NERDTreeToggle<CR>
 
