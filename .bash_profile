@@ -22,7 +22,7 @@ alias ls='ls --color'
 alias sudo='sudo env PATH=$PATH'
 
 # user path for excuting private-build
-PATH=${HOME}/local/bin:"$PATH"
+PATH=${HOME}/local/bin:${HOME}/local/sbin:"$PATH"
 #           for gcc header path
 export C_INCLUDE_PATH=${HOME}/local/include:${C_INCLUDE_PATH}
 #           for g++ header path
