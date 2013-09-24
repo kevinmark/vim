@@ -40,6 +40,8 @@ export CPLUS_INCLUDE_PATH=${HOME}/local/include
 export LD_LIBRARY_PATH=${HOME}/local/lib/
 #           searched when the program starts
 export LIBRARY_PATH=${HOME}/local/lib/
+#	    searched for installed library information
+export PKG_CONFIG_PATH=${HOME}/local/lib/pkgconfig/
 
 
 
