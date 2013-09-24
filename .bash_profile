@@ -12,14 +12,22 @@
 
 # common config
 export PS1='\u@\[\033[0;33m\]\h:\[\033[0;32m\]\w\[\033[0m\]\$'
-export LS_COLORS="$LS_COLORS:di=01;34;47"
-export LS_COLORS="$LS_COLORS:*.tar=01;31:*.tgz=01;31:*.tbz2=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.bz=01;31:*.tz=01;31"
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='02;04;32'
+
+#	color of directory color
+export LS_COLORS="$LS_COLORS:di=01;34;47"
+#	color of compress file
+export LS_COLORS="$LS_COLORS:*.tar=01;31:*.tgz=01;31:*.tbz2=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.bz=01;31:*.tz=01;31:*.xz=01;31"
+#	color of multimedia file
+export LS_COLORS="$LS_COLORS:*.avi=01;35:*.mp4=01;35:*.flv=01;35"
 
 alias vi='vim'
 alias ls='ls --color'
 alias sudo='sudo env PATH=$PATH'
+
+
+
 
 # user path for excuting private-build
 PATH=${HOME}/local/bin:${HOME}/local/sbin:"$PATH":/sbin
