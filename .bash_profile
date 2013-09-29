@@ -35,10 +35,12 @@ PATH=${HOME}/local/bin:${HOME}/local/sbin:"$PATH":/sbin
 export C_INCLUDE_PATH=${HOME}/local/include
 #           for g++ header path
 export CPLUS_INCLUDE_PATH=${HOME}/local/include
-#           searches at link time ( after compiled successfully, 
-#                    it's ready to search for these directories containing libraries )
-export LD_LIBRARY_PATH=${HOME}/local/lib/
 #           searched when the program starts
+#           (used by program)
+export LD_LIBRARY_PATH=${HOME}/local/lib/
+#           searched at link time ( before compiled completely, 
+#                    to search for directories containing needed libraries )
+#           (used by gcc)
 export LIBRARY_PATH=${HOME}/local/lib/
 #	    searched for installed library information
 export PKG_CONFIG_PATH=${HOME}/local/lib/pkgconfig/
