@@ -24,7 +24,7 @@ export LS_COLORS="$LS_COLORS:*.avi=01;35:*.mp4=01;35:*.flv=01;35:*.3gp=01;35"
 
 alias vi='vim'
 alias ls='ls --color'
-alias sudo='sudo env PATH=$PATH'
+alias sudo='sudo LD_LIBRARY_PATH=$LD_LIBRARY_PATH env PATH=$PATH'
 
 
 
