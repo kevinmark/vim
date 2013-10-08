@@ -54,9 +54,9 @@ if [ -n "$(uname -a | grep Ubuntu)" ]; then
 fi
 
 # tmp/ for compiler caching
-if [ -d "/home/omk/download_large/tmp" ]; then
-       export TEMP=/home/omk/download_large/tmp
-       export TMPDIR=/home/omk/download_large/tmp
+if [ -d "${HOME}/download_large/tmp" ]; then
+       export TEMP=${HOME}/download_large/tmp
+       export TMPDIR=${HOME}/download_large/tmp
 fi
 
 # TOMATO cross compiler position
@@ -69,3 +69,7 @@ if [ -d "/opt/brcm" ]; then
 	#LIBRARY_PATH=/opt/brcm/hndtools-mipsel-linux/lib:${LIBRARY_PATH}
 fi
 
+# python 2.7  VirtualEnv
+if [ -d "${HOME}/local/python_env" ]; then
+	VIRTUAL_ENV_DISABLE_PROMPT=1 source ${HOME}/local/python_env//bin/activate
+fi
