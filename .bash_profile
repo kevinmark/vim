@@ -61,7 +61,7 @@ fi
 
 # TOMATO cross compiler position
 if [ -d "/opt/brcm" ]; then
-	PATH="$PATH":/opt/brcm/hndtools-mipsel-uclibc/bin:/opt/brcm/hndtools-mipsel
+	PATH="$PATH":/opt/brcm/hndtools-mipsel-uclibc/bin:/opt/brcm/hndtools-mipsel-linux/bin
 
 	#CPLUS_INCLUDE_PATH=/opt/brcm/hndtools-mipsel-linux/include:${CPLUS_INCLUDE_PATH}
 	#C_INCLUDE_PATH=/opt/brcm/hndtools-mipsel-linux/include:${C_INCLUDE_PATH}
