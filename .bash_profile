@@ -30,7 +30,7 @@ alias sudo='sudo LD_LIBRARY_PATH=$LD_LIBRARY_PATH env PATH=$PATH'
 
 
 # user path for excuting private-build
-PATH=${HOME}/local/bin:${HOME}/local/sbin:"$PATH":/sbin
+PATH=${HOME}/local/bin:${HOME}/local/sbin:"$PATH":/usr/local/sbin:/usr/sbin:/sbin
 #           for gcc header path
 export C_INCLUDE_PATH=${HOME}/local/include
 #           for g++ header path
