@@ -50,7 +50,7 @@ export PKG_CONFIG_PATH=${HOME}/local/lib/pkgconfig/
 
 # 500gpv2 env section
 if [ -n "$(uname -a | grep mips)" ]; then
-
+	
 	alias ls='/opt/bin/ls --color'
 	alias wget='/opt/bin/wget'
 	#alias grep='/opt/bin/grep'
@@ -60,7 +60,8 @@ if [ -n "$(uname -a | grep mips)" ]; then
 	unalias vi
 	#alias vi='vim'
 
-	PATH="$PATH":/opt/etc/init.d    #no ":" for fitting 'nvram get env_path' in /etc/profile
+	PATH="$PATH"/opt/etc/init.d:/opt/bin:/opt/sbin:/opt/local/bin
+		#no ":" for fitting 'nvram get env_path' in /etc/profile
         #export PS1='\u@\[\033[0;33m\]\h:\[\033[1;37m\]\w\[\033[0m\]\$ '
 	export LC_ALL=zh_TW.UTF-8
 
@@ -69,6 +70,9 @@ if [ -n "$(uname -a | grep mips)" ]; then
 		
 	# for git pull
 	export GIT_SSH=${HOME}/.gitssh.sh
+	
+	# change shell for auto-complete tab
+#	[ -e /bin/ash ] && export SHELL=/bin/ash; exec /bin/ash
 fi
 
 
