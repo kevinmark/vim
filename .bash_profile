@@ -61,7 +61,7 @@ if [ -n "$(uname -a | grep mips)" ]; then
 	#alias vi='vim'
 
 	PATH="$PATH":/opt/etc/init.d    #no ":" for fitting 'nvram get env_path' in /etc/profile
-        export PS1='\u@\[\033[0;33m\]\h:\[\033[1;37m\]\w\[\033[0m\]\$ '
+        #export PS1='\u@\[\033[0;33m\]\h:\[\033[1;37m\]\w\[\033[0m\]\$ '
 	export LC_ALL=zh_TW.UTF-8
 
 	# for screen
