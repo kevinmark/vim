@@ -68,7 +68,7 @@ if [ -n "$(uname -a | grep mips)" ]; then
 	[ ! -e /opt/var/run/utmp ] && touch /opt/var/run/utmp
 		
 	# for git pull
-	export GIT_SSH=/root/.gitssh.sh
+	export GIT_SSH=${HOME}/.gitssh.sh
 fi
 
 
