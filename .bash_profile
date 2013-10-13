@@ -22,8 +22,8 @@ export LS_COLORS="$LS_COLORS:*.tar=01;31:*.tgz=01;31:*.tbz2=01;31:*.arj=01;31:*.
 #	color of multimedia file
 export LS_COLORS="$LS_COLORS:*.avi=01;35:*.mp4=01;35:*.flv=01;35:*.3gp=01;35:*.mpg=01;35"
 
-alias vi='vim'
 alias ls='ls --color'
+alias vi='vim'
 alias sudo='sudo LD_LIBRARY_PATH=$LD_LIBRARY_PATH env PATH=$PATH'
 
 
@@ -48,16 +48,40 @@ export PKG_CONFIG_PATH=${HOME}/local/lib/pkgconfig/
 
 
 
+# 500gpv2 env section
+if [ -n "$(uname -a | grep mips)" ]; then
+
+	alias ls='/opt/bin/ls --color'
+	alias wget='/opt/bin/wget'
+	#alias grep='/opt/bin/grep'
+
+	alias ps='/opt/bin/ps'
+	alias vim='env TMPDIR=/tmp TERM=xterm-color /opt/bin/vim'
+	unalias vi
+	#alias vi='vim'
+
+	PATH="$PATH":/opt/etc/init.d
+	export PS1='\u@\[\033[0;33m\]\h:\[\033[0;32m\]\w\[\033[0m\]\$'
+	export LC_ALL=zh_TW.UTF-8
+
+	# for screen
+	[ ! -e /opt/var/run/utmp ] && touch /opt/var/run/utmp
+		
+	# for git pull
+	export GIT_SSH=/root/.gitssh.sh
+fi
+
+
+
+
 # Ubuntu config
 if [ -n "$(uname -a | grep Ubuntu)" ]; then
        export LANGUAGE="en_us"
 fi
 
 # tmp/ for compiler caching
-if [ -d "${HOME}/download_large/tmp" ]; then
-       export TEMP=${HOME}/download_large/tmp
-       export TMPDIR=${HOME}/download_large/tmp
-fi
+[ -d "${HOME}/download_large/tmp" ] && \
+	export TEMP=${HOME}/download_large/tmp; export TMPDIR=${HOME}/download_large/tmp
 
 # TOMATO cross compiler position
 if [ -d "/opt/brcm" ]; then
@@ -70,6 +94,7 @@ if [ -d "/opt/brcm" ]; then
 fi
 
 # python 2.7  VirtualEnv
-if [ -d "${HOME}/local/python_env" ]; then
+[ -d "${HOME}/local/python_env" ] && \
 	VIRTUAL_ENV_DISABLE_PROMPT=1 source ${HOME}/local/python_env//bin/activate
-fi
+
+
