@@ -60,8 +60,7 @@ if [ -n "$(uname -a | grep mips)" ]; then
 	unalias vi
 	#alias vi='vim'
 
-	PATH="$PATH"/opt/etc/init.d:/opt/bin:/opt/sbin:/opt/local/bin
-		#no ":" for fitting 'nvram get env_path' in /etc/profile
+	PATH="$PATH":/opt/etc/init.d:/opt/bin:/opt/sbin:/opt/local/bin
         #export PS1='\u@\[\033[0;33m\]\h:\[\033[1;37m\]\w\[\033[0m\]\$ '
 	export LC_ALL=zh_TW.UTF-8
 
