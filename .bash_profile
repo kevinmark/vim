@@ -59,6 +59,7 @@ if [ -n "$(uname -a | grep mips)" ]; then
 	alias vim='env TMPDIR=/tmp TERM=xterm-color /opt/bin/vim'
 	unalias vi
 	#alias vi='vim'
+	alias curl='/opt/bin/curl'
 
 	PATH="$PATH":/opt/etc/init.d:/opt/bin:/opt/sbin:/opt/local/bin
         #export PS1='\u@\[\033[0;33m\]\h:\[\033[1;37m\]\w\[\033[0m\]\$ '
