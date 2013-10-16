@@ -50,6 +50,8 @@ export PKG_CONFIG_PATH=${HOME}/local/lib/pkgconfig/
 
 # 500gpv2 env section
 if [ -n "$(uname -a | grep mips)" ]; then
+	export TMP=/opt/tmp
+	export TEMP=/opt/tmp
 	
 	alias ls='/opt/bin/ls --color'
 	alias wget='/opt/bin/wget'
@@ -84,8 +86,10 @@ if [ -n "$(uname -a | grep Ubuntu)" ]; then
 fi
 
 # tmp/ for compiler caching
-[ -d "${HOME}/download_large/tmp" ] && \
-	export TEMP=${HOME}/download_large/tmp; export TMPDIR=${HOME}/download_large/tmp
+if [ -d "${HOME}/download_large/tmp" ]; then
+	export TEMP=${HOME}/download_large/tmp 
+	export TMPDIR=${HOME}/download_large/tmp
+fi	
 
 # TOMATO cross compiler position
 if [ -d "/opt/brcm" ]; then
