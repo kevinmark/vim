@@ -14,6 +14,7 @@ export CONFIGURE="./configure --host=mipsel-linux --build=$BUILD"
 #export eval SRCBASE=`pwd`
 #  eval TOOLCHAIN=`which "$CROSS_COMPILE"gcc| sed s/"$CROSS_COMPILE"gcc//g`
 #export eval TOOLCHAIN=`cd "$TOOLCHAIN"/.. && pwd -P`
+export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${PREFIX}/lib/
 
 export HOSTCC="gcc"
 export CC="$CROSS_COMPILE"gcc
@@ -33,6 +34,7 @@ export EXTRACFLAGS=" -DLINUX26 -DCONFIG_BCMWL5 -pipe -DBCMWPA2 -funit-at-a-time 
 	CC=$CC && CFLAGS="-g -O2 ""$EXTRACFLAGS" \
 	$CONFIGURE --prefix="$PREFIX" $CONFIGUREOPT
 
+sed -i '/define SCREENENCODINGS /s/"\([^"]*\)"/\"\/usr\/lib\/screen\/utf8encodings\"/g' config.h
 
 [ $? -eq 0 ] && make #&& eval `$STRIP lib/libncurses.so.5.9` 
 [ $? -eq 0 ] && make install && \
