@@ -2,7 +2,7 @@
 
 ##
 export PLATFORM="mipsel-uclibc"
-export PREFIX="/tmp/home/root/local"
+export PREFIX="/tmp/home/omk/local"
 export CONFIGUREOPT=$*
 
 
