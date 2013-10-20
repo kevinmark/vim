@@ -52,6 +52,7 @@ export PKG_CONFIG_PATH=${HOME}/local/lib/pkgconfig/
 if [ -n "$(uname -a | grep mips)" ]; then
 	export TMP=/opt/tmp
 	export TEMP=/opt/tmp
+	export TERMINFO=/opt/share/terminfo
 	
 	alias ls='/opt/bin/ls --color'
 	alias wget='/opt/bin/wget'
