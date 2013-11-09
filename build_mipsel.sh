@@ -31,7 +31,7 @@ export EXTRACFLAGS=" -DLINUX26 -DCONFIG_BCMWL5 -pipe -DBCMWPA2 -funit-at-a-time 
 #export NAME="ncurses-5.9"
 #	cd $NAME && \
 	CC=$CC && CFLAGS="-g -O2 -fPIC ""$EXTRACFLAGS" \
-	$CONFIGURE --prefix="$PREFIX" --enable-shared $CONFIGUREOPT
+	$CONFIGURE --prefix="$PREFIX" --enable-shared --with-shared $CONFIGUREOPT
 
 
 [ $? -eq 0 ] && make #&& eval `$STRIP lib/libncurses.so.5.9` 
