@@ -87,10 +87,14 @@ if [ -n "$(uname -a | grep Ubuntu)" ]; then
        export LANGUAGE="en_us"
 fi
 
-# tmp/ for compiler caching
-if [ -d "${HOME}/download_large/tmp" ]; then
-	export TEMP=${HOME}/download_large/tmp 
-	export TMPDIR=${HOME}/download_large/tmp
+# .tmp/ for compiler caching
+if [ -d "${HOME}/download_large/.tmp" ]; then
+	export TEMP=${HOME}/download_large/.tmp 
+	export TMPDIR=${HOME}/download_large/.tmp
+fi	
+if [ -d "${HOME}/download/.tmp" ]; then
+	export TEMP=${HOME}/download/.tmp 
+	export TMPDIR=${HOME}/download/.tmp
 fi	
 
 # TOMATO cross compiler position
