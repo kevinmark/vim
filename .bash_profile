@@ -25,7 +25,8 @@ export LS_COLORS="$LS_COLORS:*.avi=01;35:*.mp4=01;35:*.flv=01;35:*.3gp=01;35:*.m
 alias ls='ls --color'
 alias vi='vim'
 alias sudo='sudo env PATH=$PATH LD_LIBRARY_PATH=$LD_LIBRARY_PATH'
-
+# simple web server (depends on python)
+alias simpleweb='python -c "import SimpleHTTPServer;SimpleHTTPServer.test()"'
 
 
 
