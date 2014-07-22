@@ -112,4 +112,9 @@ fi
 [ -d "${HOME}/local/python_env" ] && \
 	VIRTUAL_ENV_DISABLE_PROMPT=1 source ${HOME}/local/python_env//bin/activate
 
+# arm 4.3.2 toolchain PATH
+if [ -d "${HOME}/task/linux_porting/4.3.2/bin" ]; then
+	PATH="$PATH":${HOME}/task/linux_porting/4.3.2/bin
+fi
+
 
