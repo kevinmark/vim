@@ -112,9 +112,14 @@ fi
 [ -d "${HOME}/local/python_env" ] && \
 	VIRTUAL_ENV_DISABLE_PROMPT=1 source ${HOME}/local/python_env//bin/activate
 
-# arm 4.3.2 toolchain PATH
-if [ -d "${HOME}/task_jz2440/linux_porting/4.3.2/bin" ]; then
-	PATH="$PATH":${HOME}/task_jz2440/linux_porting/4.3.2/bin
+# arm 4.3.2 toolchain(eabi) PATH
+if [ -d "/opt/4.3.2/bin" ]; then
+	PATH="$PATH":/opt/4.3.2/bin
+fi
+
+# RALINK sdk3301 toolchain 3.4.2 PATH "sdk3301/RT288x_SDK/toolchain/buildroot-gcc342/bin"
+if [ -d "/opt/buildroot-gcc342/bin" ]; then
+	PATH="$PATH":/opt/buildroot-gcc342/bin
 fi
 
 
