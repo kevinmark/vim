@@ -122,4 +122,8 @@ if [ -d "/opt/buildroot-gcc342/bin" ]; then
 	PATH="$PATH":/opt/buildroot-gcc342/bin
 fi
 
+# openwrt toolchain 4.8.3 PATH "openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/bin"
+if [ -d "/opt/openwrt_4.8.3/bin" ]; then
+	PATH="$PATH":/opt/openwrt_4.8.3/bin
+fi
 
