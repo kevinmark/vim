@@ -3,3 +3,4 @@
 session/*
 undofiles
 .netrwhist
+.tag/*

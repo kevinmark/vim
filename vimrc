@@ -168,7 +168,15 @@ nmap <silent> <F9> :TagbarToggle<CR>
 """"""""""""""""""""""""""""""
 " Tag list (ctags)
 """"""""""""""""""""""""""""""
+"   ctrl +]  < go to definition >
+"   ctrl +t  < Jump back from the definition >
+""""""""""""""""""""""""""""""
 "set tags=./tags,tags,../tags,../../tags,../../../tags,../../../../tags,../../../../../tags
+let $CSCOPE_DB= $HOME."/.vim/.tag"
+
+"let CSCOPE_DB_TAGS = $CSCOPE_DB."/tags"
+"let $tags= CSCOPE_DB_TAGS
+let $tags= $CSCOPE_DB."/tags"
  
 "let Tlist_Show_One_File = 1         " 不同时显示多个文件的tag，只显示当前文件的
 "let Tlist_Exit_OnlyWindow = 1       " 如果taglist窗口是最后一个窗口，则退出vim
@@ -259,19 +267,24 @@ nmap <silent> <F9> :TagbarToggle<CR>
 " Cscope
 """"""""""""""""""""""""""""""
 " 1) export CSCOPE_DB=$(pwd)  < before calling 'screen' >
+"    (x) fix the path 'CSCOPE_DB' to ${HOME}/.vim/.tag/
 " 2) ctrl+\ +c  < show caller >
 "    ctrl+\ +s  < search pattern >
 "    ctrl+\ +g  < search definition >
 """"""""""""""""""""""""""""""
 " cs add ../../../../../
-if has("cscope")
-	" add any cscope database in current directory
-	if filereadable("cscope.out")
-		cs add cscope.out 
-	" else add the database pointed to by environment variable 
-	elseif $CSCOPE_DB != ""
-		cs add cscope.out $CSCOPE_DB
-	endif
+
+" !! load following conig by ./vim/plugin/cscope_maps.vim !!
+"if has("cscope")
+"	" add any cscope database in current directory
+"	if filereadable("cscope.out")
+"		cs add cscope.out 
+"	" else add the database pointed to by environment variable 
+"	elseif $CSCOPE_DB != ""
+"		cs add cscope.out $CSCOPE_DB
+"	endif
+"endif
+
 "	if filereadable("/home/omk/download/sh5cl/cscope.out")
 "		cs add /home/omk/download/sh5cl/cscope.out
 "	endif
@@ -302,7 +315,6 @@ if has("cscope")
 "	if filereadable("/home/omk/task/igmp/cscope.out")
 "		cs add /home/omk/task/igmp/cscope.out 
 "	endif
-endif
 
 
 """"""""""""""""""""""""""""""
