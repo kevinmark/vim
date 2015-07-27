@@ -47,9 +47,6 @@ nmap <silent> <F7> :set nu!<CR>
 "show QuickFix Switch Win for 'vimgrep' result
 nmap <silent> <F10> :call QFSwitch()<CR>
 
-"Hex mode
-nmap <silent> <F6> :%!xxd<CR>
-
 """"""""""""""""""""""""""""""
 " vim 功能鍵修改
 """"""""""""""""""""""""""""""
