@@ -108,8 +108,13 @@ if [ -d "/opt/brcm" ]; then
 	#LIBRARY_PATH=/opt/brcm/hndtools-mipsel-linux/lib:${LIBRARY_PATH}
 fi
 
-# python 2.7  VirtualEnv
+# python 3  VirtualEnv
 [ -d "${HOME}/local/python_env" ] && \
 	VIRTUAL_ENV_DISABLE_PROMPT=1 source ${HOME}/local/python_env//bin/activate
 
+# Nodejs Version Magager (NVM) installation PATH
+# if others needed, make a symbolic link "/others/.nvm/" to install_dir
+[ -d "$HOME/.nvm" ] && export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && cd ~ && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
