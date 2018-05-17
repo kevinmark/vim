@@ -91,6 +91,11 @@ if [ -n "$(hostname | grep shimakaze)" ]; then
         # fix problem : when "ls -la" it disply unknown code in month column
         #export LC_TIME=zh_TW.UTF-8
         export LC_TIME=en_US.UTF-8
+
+	alias brigntness10='xrandr --output VGA1 --brightness 1'
+	alias brigntness08='xrandr --output VGA1 --brightness 0.8'
+	alias sound='alsamixer'
+	alias temprature='acpi -V'
 fi
 
 # Ubuntu config
