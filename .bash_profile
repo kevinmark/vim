@@ -46,6 +46,9 @@ export LD_LIBRARY_PATH=${HOME}/local/lib/
 export LIBRARY_PATH=${HOME}/local/lib/
 #                    searched for installed library information
 export PKG_CONFIG_PATH=${HOME}/local/lib/pkgconfig/
+#                    for GCC optimization
+export CFLAGS="-march=native -mtune=native -pipe -O2"
+export CXXFLAGS="${CFLAGS}"
 
 
 
