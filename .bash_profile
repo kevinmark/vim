@@ -93,6 +93,7 @@ if [ -n "$(hostname | grep shimakaze)" ]; then
         export LC_TIME=en_US.UTF-8
 
 	alias brigntness10='xrandr --output VGA1 --brightness 1'
+	alias brigntness09='xrandr --output VGA1 --brightness 0.9'
 	alias brigntness08='xrandr --output VGA1 --brightness 0.8'
 	alias sound='alsamixer'
 	alias temprature='acpi -V'
