@@ -83,8 +83,15 @@ if [ -n "$(uname -a | grep mips)" ]; then
 #	[ -e /bin/ash ] && export SHELL=/bin/ash; exec /bin/ash
 fi
 
+# shimakaze env
+if [ -n "$(hostname | grep shimakaze)" ]; then
 
-
+        # Chinese Description in LXDE
+        alias startx="LANGUAGE='zh_TW.UTF-8' startx"
+        # fix problem : when "ls -la" it disply unknown code in month column
+        #export LC_TIME=zh_TW.UTF-8
+        export LC_TIME=en_US.UTF-8
+fi
 
 # Ubuntu config
 if [ -n "$(uname -a | grep Ubuntu)" ]; then
